@@ -75,8 +75,11 @@ public class TwitterStreaming {
 				//System.out.println(status.getText());
 				JSONObject comentario = new JSONObject();
 				JSONObject content = new JSONObject();
+				String textFixed = status.getText().replaceAll("\"", "\\\\\"");
+				System.out.println(status.getText());
+				System.out.println(textFixed);
 				String comment = "{\"id\" : \""+status.getId()+"\","
-						+ " \"text\" : \""+status.getText()+"\","
+						+ " \"text\" : \""+textFixed+"\","
 								+ " \"location\" : \""+status.getGeoLocation()+"\","
 										+ " \"date\" : \""+status.getCreatedAt()+"\"}";
 				//String tweet = DataObjectFactory.getRawJSON(status);
