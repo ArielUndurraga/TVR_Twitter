@@ -1,0 +1,12 @@
+
+DROP SCHEMA IF EXISTS tvreactions;
+CREATE SCHEMA tvreactions;
+USE tvreactions;
+
+CREATE TABLE admin (
+  admin_id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  admin_user VARCHAR(45) NOT NULL,
+  admin_pass VARCHAR(45) NOT NULL,
+  last_update TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY  (adminadminadmin_id))
+		
