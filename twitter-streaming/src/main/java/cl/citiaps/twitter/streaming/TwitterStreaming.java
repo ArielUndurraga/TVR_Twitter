@@ -93,6 +93,7 @@ public class TwitterStreaming {
 		FilterQuery fq = new FilterQuery();
 
 		fq.track(keywords.toArray(new String[0]));
+		fq.language(new String[]{"es"});
 
 		this.twitterStream.addListener(listener);
 		this.twitterStream.filter(fq);
